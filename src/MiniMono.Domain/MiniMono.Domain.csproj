@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>Wright.Demo.MiniMono.Domain</RootNamespace>
+        <AssemblyName>Wright.Demo.MiniMono.Domain</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MediatR.Contracts" />
+    </ItemGroup>
+    
+</Project>

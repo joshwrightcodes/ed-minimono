@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <RootNamespace>Wright.Demo.MiniMono.Api</RootNamespace>
+        <AssemblyName>Wright.Demo.MiniMono.Api</AssemblyName>
+        <UserSecretsId>dotnet-Wright.Demo.MiniMono.Api-B66FC9C1-C37A-4585-B9D0-00C849429BB5</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog.AspNetCore" />
+        <PackageReference Include="Serilog.Sinks.Console" />
+        <PackageReference Include="Serilog.Settings.Configuration" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MiniMono.Application\MiniMono.Application.csproj" />
+      <ProjectReference Include="..\MiniMono.Infrastructure\MiniMono.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
