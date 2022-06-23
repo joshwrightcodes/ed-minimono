@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>Wright.Demo.MiniMono.Application</RootNamespace>
+        <AssemblyName>Wright.Demo.MiniMono.Application</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Lessons\GetLesson" />
+      <Folder Include="Lessons\GetLessons" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MiniMono.Domain\MiniMono.Domain.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+        <PackageReference Include="JsonPatch.Net" />
+        <PackageReference Include="Macross.Json.Extensions" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    </ItemGroup>
+
+</Project>
