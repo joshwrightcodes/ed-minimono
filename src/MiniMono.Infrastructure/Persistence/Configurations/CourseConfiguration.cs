@@ -10,7 +10,7 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
 	{
 		ArgumentNullException.ThrowIfNull(builder);
 
-		builder.Property(p => p.Name)
+		builder.Property(p => p.Title)
 			.HasMaxLength(200)
 			.IsRequired();
 	}

@@ -1,9 +1,11 @@
+// ---------------------------------------------------------------------------------------------------------------------
 // <copyright file="JsonPatchExtensions.cs" company="Josh Wright">
 // Copyright 2022 Josh Wright. Use of this source code is governed by an MIT-style, license that can be found in the
 // LICENSE file or at https://opensource.org/licenses/MIT.
 // </copyright>
+// ---------------------------------------------------------------------------------------------------------------------
 
-namespace Wright.Demo.MiniMono.Application.Common.JsonPatch;
+namespace Wright.Demo.MiniMono.Application.Common;
 
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -66,8 +68,8 @@ public static class JsonPatchExtensions
 		this JsonPatch patch,
 		TEntity entity,
 		IMapper mapper,
-		IEnumerable<IValidator<TUpdateModel>> validators = null,
-		JsonSerializerOptions jsonSerializerOptions = default,
+		IEnumerable<IValidator<TUpdateModel>> validators,
+		JsonSerializerOptions jsonSerializerOptions = default!,
 		CancellationToken cancellationToken = default)
 		where TEntity : class
 		where TUpdateModel : IMapFrom<TEntity>
@@ -82,13 +84,16 @@ public static class JsonPatchExtensions
 		// Validate Patch
 		try
 		{
-			updated = patch.Apply<TUpdateModel, TUpdateModel>(original, jsonSerializerOptions);
+			updated = patch.Apply<TUpdateModel, TUpdateModel>(original, jsonSerializerOptions)!;
 		}
 		catch (InvalidOperationException ex)
 		{
 			Match match = Regex.Match(ex.Message, ErrorExpression);
 
-			if (!match.Success) throw;
+			if (!match.Success)
+			{
+				throw;
+			}
 
 			throw new Exceptions.ValidationException(new[]
 			{

@@ -1,5 +1,6 @@
 using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using Wright.Demo.MiniMono.Application.Common;
 using Wright.Demo.MiniMono.Application.Common.Exceptions;
 using Wright.Demo.MiniMono.Domain.Courses;

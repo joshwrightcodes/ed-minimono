@@ -92,3 +92,6 @@ dotnet_diagnostic.SA1101.severity = none
 # SA1600 - Elements Must Be Documented
 # Duplicate of CS1591
 dotnet_diagnostic.SA1600.severity = none
+
+dotnet_naming_style.underscored.required_prefix = unset
+dotnet_naming_style.underscored.capitalization = camel_case

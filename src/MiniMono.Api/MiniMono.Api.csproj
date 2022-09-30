@@ -3,20 +3,38 @@
     <PropertyGroup>
         <RootNamespace>Wright.Demo.MiniMono.Api</RootNamespace>
         <AssemblyName>Wright.Demo.MiniMono.Api</AssemblyName>
-        <UserSecretsId>dotnet-Wright.Demo.MiniMono.Api-B66FC9C1-C37A-4585-B9D0-00C849429BB5</UserSecretsId>
+        <UserSecretsId>Wright.Demo.MiniMono.Api-B66FC9C1-C37A-4585-B9D0-00C849429BB5</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Serilog.AspNetCore" />
-        <PackageReference Include="Serilog.Sinks.Console" />
-        <PackageReference Include="Serilog.Settings.Configuration" />
-        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageReference Include="FluentValidation.AspNetCore"/>
+        <PackageReference Include="MicroElements.Swashbuckle.FluentValidation"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer"/>
+        <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore"/>
+        <PackageReference Include="OpenTelemetry"/>
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting"/>
+        <PackageReference Include="OpenTelemetry.Exporter.Console"/>
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore"/>
+        <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore"/>
+        <PackageReference Include="OpenTelemetry.Instrumentation.Http"/>
+        <PackageReference Include="Serilog.AspNetCore"/>
+        <PackageReference Include="Serilog.Sinks.Console"/>
+        <PackageReference Include="Serilog.Settings.Configuration"/>
+        <PackageReference Include="Swashbuckle.AspNetCore"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.Filters"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.ReDoc"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MiniMono.Application\MiniMono.Application.csproj" />
-      <ProjectReference Include="..\MiniMono.Infrastructure\MiniMono.Infrastructure.csproj" />
+        <ProjectReference Include="..\MiniMono.Application\MiniMono.Application.csproj"/>
+        <ProjectReference Include="..\MiniMono.Infrastructure\MiniMono.Infrastructure.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Filters"/>
     </ItemGroup>
 
 </Project>

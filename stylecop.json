@@ -4,6 +4,8 @@
     "documentationRules": {
       "companyName": "Josh Wright",
       "copyrightText": "Copyright {copyrightYear} {companyName}. Use of this source code is governed by an {licenseName}-style, license that can be found in the\n{licenseFile} file or at https://opensource.org/licenses/MIT.",
+      "headerDecoration": "---------------------------------------------------------------------------------------------------------------------",
+      "documentationCulture": "en-AU",
       "variables": {
         "licenseName": "MIT",
         "licenseFile": "LICENSE",
@@ -23,7 +25,7 @@
         "static",
         "readonly"
       ],
-      "usingDirectivesPlacement": "outsideNamespace",
+      "usingDirectivesPlacement": "insideNamespace",
       "systemUsingDirectivesFirst": true,
       "blankLinesBetweenUsingGroups": "omit"
     },
@@ -32,7 +34,8 @@
     },
     "layoutRules": {
       "allowConsecutiveUsings": true,
-      "newlineAtEndOfFile": "omit"
+      "newlineAtEndOfFile": "omit",
+      "allowDoWhileOnClosingBrace": false
     }
   }
 }
